@@ -1,0 +1,67 @@
+.competences{
+    display: flex;
+    flex-direction: column;
+    background-color: #151515;
+    padding-top: 3rem;
+    width: 100%;
+    .tab-competences{
+        width: 80%;
+    }
+    h2{
+        color: white;
+    }
+
+    .competences-item{
+        display: flex;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin: 2rem;
+        height: 2rem;
+        overflow: hidden; // Ensures the pseudo-element animation is contained
+        position: relative; // Establishes a stacking context for pseudo-elements
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 1rem;
+        
+        
+
+        p{
+            display: flex;
+            color: white;
+            text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0.5rem;
+            height: 100%;
+            padding-left: 1rem;
+        }
+       
+    }
+    .competences-item-last{
+       margin-bottom: 100px;
+    }
+    .html p{
+        background-color: #E34F26;
+        width: 93%;
+    }
+    .css p{
+        background-color: #1572B6;
+        width: 93%;
+    }
+    .scss p{
+        background-color: #C6538C;
+        width: 83%;
+    }
+    .javascript p{
+        background-color: #F7DF1E;
+        width: 79%;
+    }
+    .react p{
+        background-color: #61DAFB;
+        width: 67%;
+    }
+    .redux p{
+        background-color: #764ABC;
+        width: 35%;
+    }
+}
