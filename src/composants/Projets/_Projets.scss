@@ -52,13 +52,16 @@
 
             .Btn {
                 color: red;
-                opacity: 0; // Initialement transparent
-                visibility: hidden; // Initialement invisible
-                transition: opacity 0.5s, visibility 0.5s; // Transition sur l'opacité et la visibilité
+                opacity: 0; 
+                visibility: hidden; 
+                transition: opacity 0.5s, visibility 0.5s; 
                 z-index: 10;
                 position: absolute;
                 height: 13rem;
                 width: 13rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             &:hover .Btn {
@@ -74,3 +77,73 @@
         }
     }
 }
+.modal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75%; ; 
+    text-align: center;
+
+    .img-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1rem;
+
+        img{
+            width: 33vw;
+        }
+    }
+
+    h3, h4 {
+        margin: 10px 0;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    button {
+        
+        display: block;
+        background: #333333;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,48 @@
+{
+    "724_Events": [
+      {"id": "724events1", "path": "images/724_Events/724events.png"},
+      {"id": "724events2", "path": "images/724_Events/724events.png"},
+      {"id": "724events", "path": "images/724_Events/724events.png"}
+    ],
+    "Argentbank": [
+      {"id": "argentbank", "path": "images/Argentbank/ArgentBank.png"},
+      {"id": "argentbank1", "path": "images/Argentbank/ArgentBank1.png"},
+      {"id": "argentbank2", "path": "images/Argentbank/ArgentBank2.png"}
+    ],
+    "Booki": [
+      {"id": "booki", "path": "images/Booki/booki.png"},
+      {"id": "booki1", "path": "images/Booki/booki1.PNG"},
+      {"id": "booki2", "path": "images/Booki/booki2.PNG"}
+    ],
+    "Kasa": [
+      {"id": "kasa", "path": "images/Kasa/Kasa.png"},
+      {"id": "kasa1", "path": "images/Kasa/kasa1.PNG"},
+      {"id": "kasa2", "path": "images/Kasa/kasa2.PNG"}
+    ],
+    "Menu_marker": [
+      {"id": "menu_marker1", "path": "images/Menu_marker/menu_marker1.PNG"},
+      {"id": "menu_marker2", "path": "images/Menu_marker/menu_marker2.PNG"},
+      {"id": "menu_marker", "path": "images/Menu_marker/menu_marker.png"}
+    ],
+    "Nina_carducci": [
+      {"id": "nina_carducci1", "path": "images/Nina_carducci/nina_carducci1.PNG"},
+      {"id": "nina_carducci2", "path": "images/Nina_carducci/nina_carducci2.PNG"},
+      {"id": "nina_carducci", "path": "images/Nina_carducci/Nina_carducci.png"}
+    ],
+    "Ohmyfood": [
+      {"id": "ohmyfood", "path": "images/Ohmyfood/ohmyfood.png"},
+      {"id": "ohmyfood1", "path": "images/Ohmyfood/ohmyfood1.PNG"},
+      {"id": "ohmyfood2", "path": "images/Ohmyfood/ohmyfood2.PNG"}
+    ],
+    "Print_it": [
+      {"id": "print_it", "path": "images/Print_it/Print_it.png"},
+      {"id": "print_it1", "path": "images/Print_it/print_it1.PNG"},
+      {"id": "print_it2", "path": "images/Print_it/print_it2.PNG"}
+    ],
+    "Sophie_blue1": [
+      {"id": "sophie_blue11", "path": "images/Sophie_blue1/sophie_blue11.PNG"},
+      {"id": "sophie_blue12", "path": "images/Sophie_blue1/sophie_blue12.PNG"},
+      {"id": "sophie_blue1", "path": "images/Sophie_blue1/Sophie_blue1.png"}
+    ]
+  }
+  

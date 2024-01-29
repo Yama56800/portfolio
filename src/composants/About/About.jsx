@@ -6,7 +6,7 @@ export default function About() {
  
 
     return (
-        <div className="about" id="about">
+        <div className="about" id="presentation">
             
             <img className="photo-profil" src={photo} alt="photo de profil" />
             <div className="description">

@@ -4,6 +4,7 @@
     background-color: white;
     position: relative;
     top: 0;
+   
 
 
     a{
@@ -14,8 +15,27 @@
  ul{
     display: flex;
     flex-direction: row;
-    margin: 2rem;
+    margin: 1rem;
     gap: 2rem;
     list-style-type: none;
  }
 }
+/* Votre fichier CSS */
+.navbar {
+    /* Styles de base pour la navbar */
+    background-color: #ffffff;
+    padding: 0px;
+    transition: all 0.3s ease; /* Animation de transition douce */
+  }
+  
+  .navbar.sticky {
+    /* Styles à appliquer lorsque la navbar devient collante */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour la navbar collante */
+    z-index: 100; /* Assurez-vous que la navbar collante est au-dessus de tout le reste */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+  }
+  

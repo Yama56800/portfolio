@@ -1,66 +1,188 @@
-import React from "react";
-import booki from '../../images/booki.png';
-import ohmyfood from '../../images/ohgmyfood.png';
-import Print_it from '../../images/Print-it.png';
-import Sophie_Bluel from '../../images/sophie-bluel.png';
-import Menu_Marker from '../../images/menu-marker.png';
-import Kasa from '../../images/Kasa.png';
-import Nina_Carducci from '../../images/Nina-Carducci.png';
-import Events from '../../images/724Events.png';
-import ArgentBank from '../../images/ArgentBank.png';
-import Btn from '../Btn-rotation/Btn-rotation'
+import React, { useState } from "react";
+
+import booki from '../../images/Booki/booki.png';
+import booki1 from '../../images/Booki/booki1.png';
+import booki2 from '../../images/Booki/Booki2.png';
+
+import ohmyfood from '../../images/Ohmyfood/ohmyfood.png';
+import ohmyfood1 from '../../images/Ohmyfood/ohmyfood1.png';
+import ohmyfood2 from '../../images/Ohmyfood/ohmyfood2.png';
+
+import print_it from '../../images/Print_it/Print_it.png';
+import print_it1 from '../../images/Print_it/print_it1.png';
+import print_it2 from '../../images/Print_it/print_it2.png';
+
+import sophie_bluel from '../../images/Sophie_bluel/sophie_bluel.png';
+import sophie_bluel1 from '../../images/Sophie_bluel/sophie_bluel1.png';
+import sophie_bluel2 from '../../images/Sophie_bluel/sophie_bluel2.png';
+
+import menu_marker from '../../images/Menu_marker/menu_marker.png';
+import menu_marker1 from '../../images/Menu_marker/menu_marker1.png';
+import menu_marker2 from '../../images/Menu_marker/menu_marker2.png';
+
+import kasa from '../../images/Kasa/Kasa.png';
+import kasa1 from '../../images/Kasa/kasa1.png';
+import kasa2 from '../../images/Kasa/kasa2.png';
+
+import nina_carducci from '../../images/Nina_carducci/Nina_Carducci.png';
+import nina_carducci1 from '../../images/Nina_carducci/nina_carducci1.png';
+import nina_carducci2 from '../../images/Nina_carducci/nina_carducci2.png';
+
+import events from '../../images/724_Events/724Events.png';
+import events1 from '../../images/724_Events/724events1.png';
+import events2 from '../../images/724_Events/724events2.png';
+
+import argentbank from '../../images/Argentbank/ArgentBank.png';
+import argentbank1 from '../../images/Argentbank/ArgentBank.png';
+import argentbank2 from '../../images/Argentbank/ArgentBank.png';
+
+
+
+import Btn from '../Btn-rotation/Btn-rotation';
+import data from '../../../src/data.json'
+
+function Modal({ isOpen, onClose, content }) {
+    if (!isOpen) return null;
+
+    return (
+        <div className="modal">
+            <div className="modal-content">
+                <button onClick={onClose}><i class="fa fa-times" aria-hidden="true"></i></button>
+                <h3>{content.title}</h3>
+                <h4>{content.subTitle}</h4>
+                <div className="img-content">
+                <img src={content.images_presentation1} alt={content.title} />
+                <img src={content.images_presentation2} alt={content.title} />
+                </div>
+                <p>{content.description}</p>
+                <div className="link-content">
+                <a href={content.siteUrl} target="_blank" rel="noopener noreferrer">Visiter le Site</a>
+                <a href={content.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 export default function Projets() {
-  
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState({});
+
+    const projects = [
+        {
+            title: 'Booki',
+            subTitle: 'Sous-titre de Booki',
+            image: booki,
+            images_presentation1: booki1,
+            images_presentation2: booki2,
+            description: 'Description de Booki.',
+            siteUrl: 'https://booki.com',
+            githubUrl: 'https://github.com/user/booki',
+        },
+        {
+            title: 'Ohmyfood',
+            subTitle: 'Sous-titre de Ohmyfood',
+            image: ohmyfood,
+            images_presentation1: ohmyfood1,
+            images_presentation2: ohmyfood2,
+            description: 'Description de Ohmyfood.',
+            siteUrl: 'https://ohmyfood.com',
+            githubUrl: 'https://github.com/user/ohmyfood',
+        },
+        {
+            title: 'Print it!',
+            subTitle: 'Sous-titre de Print it!',
+            image: print_it,
+            images_presentation1: print_it1,
+            images_presentation2: print_it2,
+            description: 'Description de Print it!.',
+            siteUrl: 'https://printit.com',
+            githubUrl: 'https://github.com/user/printit',
+        },
+        {
+            title: 'Sophie Bluel',
+            subTitle: 'Sous-titre de Sophie Bluel',
+            image: sophie_bluel,
+            images_presentation1: sophie_bluel1,
+            images_presentation2: sophie_bluel2,
+            description: 'Description de Sophie Bluel.',
+            siteUrl: 'https://sophiebluel.com',
+            githubUrl: 'https://github.com/user/sophiebluel',
+        },
+        {
+            title: 'Menu Marker',
+            subTitle: 'Sous-titre de Menu Marker',
+            image: menu_marker,
+            images_presentation1: menu_marker1,
+            images_presentation2: menu_marker2,
+            description: 'Description de Menu Marker.',
+            siteUrl: 'https://menumarker.com',
+            githubUrl: 'https://github.com/user/menumarker',
+        },
+        {
+            title: 'Kasa',
+            subTitle: 'Sous-titre de Kasa',
+            image: kasa,
+            images_presentation1: kasa1,
+            images_presentation2: kasa2,
+            description: 'Description de Kasa.',
+            siteUrl: 'https://kasa.com',
+            githubUrl: 'https://github.com/user/kasa',
+        },
+        {
+            title: 'Nina Carducci',
+            subTitle: 'Sous-titre de Nina Carducci',
+            image: nina_carducci,
+            images_presentation1: nina_carducci1,
+            images_presentation2: nina_carducci2,
+            description: 'Description de Nina Carducci.',
+            siteUrl: 'https://ninacarducci.com',
+            githubUrl: 'https://github.com/user/ninacarducci',
+        },
+        {
+            title: '724 Events',
+            subTitle: 'Sous-titre de 724 Events',
+            image: events,
+            images_presentation1: events1,
+            images_presentation2: events2,
+            description: 'Description de 724 Events.',
+            siteUrl: 'https://724events.com',
+            githubUrl: 'https://github.com/user/724events',
+        },
+        {
+            title: 'Argent Bank',
+            subTitle: 'Sous-titre de Argent Bank',
+            image: argentbank,
+            images_presentation1: argentbank1,
+            images_presentation2: argentbank2,
+            description: 'Description de Argent Bank.',
+            siteUrl: 'https://argentbank.com',
+            githubUrl: 'https://github.com/user/argentbank',
+        },
+    ];
+    
+
+    const openModal = (project) => {
+        setSelectedProject(project);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => setModalOpen(false);
 
     return (
         <div className="projets">
-          <h2>Mes Projets</h2>
-
-          <div className="gallery">
-
-            <div className="gallery-item">
-                <h3>Booki</h3>
-                <img src={booki} alt="booki" />
-                <div className="Btn"><Btn></Btn></div>
-            </div>
-            <div className="gallery-item">
-                <h3>Ohmyfood</h3>
-                <img src={ohmyfood} alt="Ohmyfood" />
-            </div>
-            <div className="gallery-item">
-                <h3>Print it! </h3>
-                <img src={Print_it} alt="Print it!" />
-            </div>
-            <div className="gallery-item">
-                <h3>Sophie Bluel </h3>
-                <img src={Sophie_Bluel} alt="Sophie Bluel" />
-            </div>
-            <div className="gallery-item">
-                <h3>Menu Marker </h3>
-                <img src={Menu_Marker} alt="Menu Marker" />
-            </div>
-            <div className="gallery-item">
-                <h3>Kasa </h3>
-                <img src={Kasa} alt="Kasa" />
-            </div>
-            <div className="gallery-item">
-                <h3>Nica Carducci </h3>
-                <img src={Nina_Carducci} alt=">Nica Carducci" />
-            </div>
-            <div className="gallery-item">
-                <h3>724 Events </h3>
-                <img src={Events} alt="724 Events" />
-            </div>
-            <div className="gallery-item">
-                <h3>Argent Bank </h3>
-                <img src={ArgentBank} alt="Argent Bank" />
+            <h2>Mes Projets</h2>
+            <div className="gallery" id="realisations">
+                {projects.map((project, index) => (
+                    <aside key={index} className="gallery-item" onClick={() => openModal(project)}>
+                        <h3>{project.title}</h3>
+                        <img src={project.image} alt={project.title} />
+                        <div className="Btn"><Btn /></div>
+                    </aside>
+                ))}
             </div>
 
-
-
-
-          </div>
-
+            <Modal isOpen={modalOpen} onClose={closeModal} content={selectedProject} />
         </div>
     );
 }

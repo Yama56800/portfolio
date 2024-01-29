@@ -8,14 +8,14 @@ export default function Welcome() {
             .then(module => {
                 const neonCursor = module.neonCursor;
                 neonCursor({
-                    el: document.getElementById('welcome'),
+                    el: document.getElementById('accueil'),
                     shaderPoints: 16,
                     curvePoints: 80,
                     curveLerp: 0.5,
                     radius1: 5,
                     // radius2: 0,
-                    radius2: 15,
-                    velocityTreshold: 10,
+                    radius2: 3,
+                    velocityTreshold: 15,
                     sleepRadiusX: 175,
                     sleepRadiusY: 175,
                     sleepTimeCoefX: 0.0025,
@@ -27,7 +27,7 @@ export default function Welcome() {
 
     return (
         <>
-        <div className="welcome" id="welcome">
+        <div className="welcome" id="accueil">
             <div id="hero">
                 <a target="_blank" href="https://github.com/klevron/threejs-toys" rel="noopener noreferrer"> </a>
                 <h1> Thomas Mahias<br/>Développeur Front-End et Artiste Numérique</h1>

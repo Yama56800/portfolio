@@ -1,7 +1,7 @@
 import React from "react";
 export default function Competences() {
   return (
-    <nav className="competences">
+    <nav className="competences" id="competences">
       <ul className="tab-competences">
         <h2>Mes Compétences</h2>
         <li className="competences-item html">

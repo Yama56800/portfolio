@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Importez axios pour effectuer la requête HTTP POST
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false); // État pour suivre si le formulaire a été soumis
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,15 +18,22 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Ici, ajoutez votre logique pour gérer l'envoi des données du formulaire (par exemple, à une API)
-    console.log('Form data submitted:', formData);
-    setIsSubmitted(true); // Mettre à jour l'état lors de la soumission
+
+    try {
+      // Envoyez les données du formulaire au backend
+      const response = await axios.post('/api/send-email', formData); // Remplacez '/api/send-email' par l'URL de votre endpoint backend
+      console.log('Server response:', response.data);
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   };
 
   return (
-    <div className="form">
+    <div className="form" id='contact'>
       <div className="contact-form">
         <h2>DÉMARRONS UN PROJET ENSEMBLE, N'HÉSITEZ PAS À ME CONTACTER</h2>
         {!isSubmitted ? (
