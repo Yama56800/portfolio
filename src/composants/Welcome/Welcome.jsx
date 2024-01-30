@@ -1,28 +1,23 @@
 import React, { useEffect } from "react";
-
+import { neonCursor } from 'threejs-toys'; // Ajustez selon le nom d'export correct
 
 export default function Welcome() {
     useEffect(() => {
-        // Importation dynamique du script si l'installation via npm n'est pas possible
-        
-        if (window.neonCursor) {
-            window.neonCursor({
-                el: document.getElementById('accueil'),
-                shaderPoints: 16,
-                curvePoints: 80,
-                curveLerp: 0.5,
-                radius1: 5,
-                radius2: 3,
-                velocityTreshold: 15,
-                sleepRadiusX: 175,
-                sleepRadiusY: 175,
-                sleepTimeCoefX: 0.0025,
-                sleepTimeCoefY: 0.0025
-            });
-        } else {
-            console.log('neonCursor n\'est pas défini');
-        }
+        neonCursor({
+            el: document.getElementById('accueil'),
+            shaderPoints: 16,
+            curvePoints: 80,
+            curveLerp: 0.5,
+            radius1: 5,
+            radius2: 3,
+            velocityTreshold: 15,
+            sleepRadiusX: 175,
+            sleepRadiusY: 175,
+            sleepTimeCoefX: 0.0025,
+            sleepTimeCoefY: 0.0025
+        });
     }, []);
+
     return (
         <>
         <div className="welcome" id="accueil">
