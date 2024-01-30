@@ -4,27 +4,25 @@ import React, { useEffect } from "react";
 export default function Welcome() {
     useEffect(() => {
         // Importation dynamique du script si l'installation via npm n'est pas possible
-        import('https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js')
-            .then(module => {
-                const neonCursor = module.neonCursor;
-                neonCursor({
-                    el: document.getElementById('accueil'),
-                    shaderPoints: 16,
-                    curvePoints: 80,
-                    curveLerp: 0.5,
-                    radius1: 5,
-                    // radius2: 0,
-                    radius2: 3,
-                    velocityTreshold: 15,
-                    sleepRadiusX: 175,
-                    sleepRadiusY: 175,
-                    sleepTimeCoefX: 0.0025,
-                    sleepTimeCoefY: 0.0025
-                });
-            })
-            .catch(error => console.log('Erreur lors du chargement de threejs-toys', error));
+        
+        if (window.neonCursor) {
+            window.neonCursor({
+                el: document.getElementById('accueil'),
+                shaderPoints: 16,
+                curvePoints: 80,
+                curveLerp: 0.5,
+                radius1: 5,
+                radius2: 3,
+                velocityTreshold: 15,
+                sleepRadiusX: 175,
+                sleepRadiusY: 175,
+                sleepTimeCoefX: 0.0025,
+                sleepTimeCoefY: 0.0025
+            });
+        } else {
+            console.log('neonCursor n\'est pas défini');
+        }
     }, []);
-
     return (
         <>
         <div className="welcome" id="accueil">
