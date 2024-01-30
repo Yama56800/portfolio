@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    justify-content: start;
     background-color: #fff;
     
 
@@ -27,9 +26,8 @@ body, html, #app {
   .about {
     overflow: hidden;
     touch-action: pan-up;
-    color: #ffffff;
+    color: black;
     text-align: center;
-    text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
   }
   
  

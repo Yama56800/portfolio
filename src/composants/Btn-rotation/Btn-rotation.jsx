@@ -12,7 +12,7 @@ export default function BtnRotation() {
           <path id="link-circle" className="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
           <text className="link__text">
             <textPath href="#link-circle" stroke="none">
-              Come quick and click this
+              click click click click
             </textPath>
           </text>
         </svg>

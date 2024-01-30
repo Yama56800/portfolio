@@ -31,7 +31,13 @@
             align-items: center;
             width: 20rem;
             height: 10rem;
+            opacity: 0;
+            transition:  0.5s ease-in-out;
 
+            &[data-aos] {
+                opacity: 1;
+            }
+         
             &::after {
                 content: '';
                 position: absolute;
@@ -46,7 +52,7 @@
             }
 
             &:hover::after {
-                background-color: rgba(33, 33, 33, 0.8); 
+                background-color: rgba(33, 33, 33, 0.5); 
                 opacity: 1;
             }
 
@@ -65,8 +71,8 @@
             }
 
             &:hover .Btn {
-                opacity: 1; // Devient visible et opaque au survol
-                visibility: visible; // Rend le bouton visible au survol
+                opacity: 1;
+                visibility: visible; 
             }
         }
 
@@ -91,7 +97,8 @@
 }
 
 .modal-content {
-    background-color: #333333;
+    background-color: white;
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -122,13 +129,13 @@
         display: inline-block;
         margin: 0 10px;
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: grey;
         color: white;
         border-radius: 5px;
         text-decoration: none;
 
         &:hover {
-            background-color: #0056b3;
+            background-color: grey;
         }
     }
 
@@ -141,9 +148,73 @@
     button {
         
         display: block;
-        background: #333333;
+        background: white;
         font-size: 1rem;
         cursor: pointer;
     }
 }
 
+body {
+    &:before, &:after {
+      content: "";
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+    }
+    &:after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+  
+  .scroll {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    display: none;
+  
+    span {
+      display: block;
+    }
+  
+    svg {
+      margin-top: 10px;
+      width: 18px;
+      height: 18px;
+      animation: scroll 0.95s ease-in-out alternate infinite;
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+      stroke-width: 1;
+    }
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 40%;
+    opacity: 0;
+    margin: -19px auto;
+    transition: transform 1s cubic-bezier(0.14, 0.15, 0.13, 0.99);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }

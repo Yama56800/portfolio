@@ -10,7 +10,7 @@ $accentColor: #E8D6C1;
 
 
 .link {
-	width: 6rem;
+	width: 7rem;
 	height: 10rem;
 	
 	font: 300 1.55rem/1.4 "Josefin Sans"; 
@@ -24,8 +24,8 @@ $accentColor: #E8D6C1;
 
 	&__svg {
         display: flex;
-    justify-content: center;
-    align-items: center;
+    	justify-content: center;
+    	align-items: center;
 		width: 100%;
 		height: auto;
 		transform-box: fill-box;

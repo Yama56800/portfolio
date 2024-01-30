@@ -1,4 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+
+import Btn from '../Btn-rotation/Btn-rotation';
 
 import booki from '../../images/Booki/booki.png';
 import booki1 from '../../images/Booki/booki1.png';
@@ -36,10 +43,7 @@ import argentbank from '../../images/Argentbank/ArgentBank.png';
 import argentbank1 from '../../images/Argentbank/ArgentBank.png';
 import argentbank2 from '../../images/Argentbank/ArgentBank.png';
 
-
-
-import Btn from '../Btn-rotation/Btn-rotation';
-import data from '../../../src/data.json'
+import data from '../../../src/data.json';
 
 function Modal({ isOpen, onClose, content }) {
     if (!isOpen) return null;
@@ -47,17 +51,17 @@ function Modal({ isOpen, onClose, content }) {
     return (
         <div className="modal">
             <div className="modal-content">
-                <button onClick={onClose}><i class="fa fa-times" aria-hidden="true"></i></button>
+                <button onClick={onClose}><i className="fa fa-times" aria-hidden="true"></i></button>
                 <h3>{content.title}</h3>
                 <h4>{content.subTitle}</h4>
                 <div className="img-content">
-                <img src={content.images_presentation1} alt={content.title} />
-                <img src={content.images_presentation2} alt={content.title} />
+                    <img src={content.images_presentation1} alt={content.title} />
+                    <img src={content.images_presentation2} alt={content.title} />
                 </div>
                 <p>{content.description}</p>
                 <div className="link-content">
-                <a href={content.siteUrl} target="_blank" rel="noopener noreferrer">Visiter le Site</a>
-                <a href={content.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href={content.siteUrl} target="_blank" rel="noopener noreferrer">Visiter le Site</a>
+                    <a href={content.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
@@ -67,11 +71,13 @@ function Modal({ isOpen, onClose, content }) {
 export default function Projets() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState({});
+    const content = document.querySelector('#content');
 
+    
     const projects = [
         {
             title: 'Booki',
-            subTitle: 'Sous-titre de Booki',
+            subTitle: 'Booki',
             image: booki,
             images_presentation1: booki1,
             images_presentation2: booki2,
@@ -81,7 +87,7 @@ export default function Projets() {
         },
         {
             title: 'Ohmyfood',
-            subTitle: 'Sous-titre de Ohmyfood',
+            subTitle: 'Ohmyfood',
             image: ohmyfood,
             images_presentation1: ohmyfood1,
             images_presentation2: ohmyfood2,
@@ -91,7 +97,7 @@ export default function Projets() {
         },
         {
             title: 'Print it!',
-            subTitle: 'Sous-titre de Print it!',
+            subTitle: 'Print it!',
             image: print_it,
             images_presentation1: print_it1,
             images_presentation2: print_it2,
@@ -101,7 +107,7 @@ export default function Projets() {
         },
         {
             title: 'Sophie Bluel',
-            subTitle: 'Sous-titre de Sophie Bluel',
+            subTitle: 'Sophie Bluel',
             image: sophie_bluel,
             images_presentation1: sophie_bluel1,
             images_presentation2: sophie_bluel2,
@@ -160,7 +166,34 @@ export default function Projets() {
             githubUrl: 'https://github.com/user/argentbank',
         },
     ];
-    
+
+    useEffect(() => {
+        AOS.init({
+            duration: 3000,
+            once: false,
+        });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Créez vos éléments "circle" ici (code pour créer des cercles).
+
+        const Circles = document.querySelectorAll('.circle');
+
+        const main = gsap.timeline({
+            scrollTrigger: {
+                scrub: 0.7,
+                start: "top 25%",
+                end: "bottom bottom"
+            }
+        });
+
+        Circles.forEach((circle) => {
+            main.to(circle, {
+                opacity: 1,
+            });
+        });
+
+    }, []);
 
     const openModal = (project) => {
         setSelectedProject(project);
@@ -171,18 +204,32 @@ export default function Projets() {
 
     return (
         <div className="projets">
-            <h2>Mes Projets</h2>
-            <div className="gallery" id="realisations">
-                {projects.map((project, index) => (
-                    <aside key={index} className="gallery-item" onClick={() => openModal(project)}>
-                        <h3>{project.title}</h3>
-                        <img src={project.image} alt={project.title} />
-                        <div className="Btn"><Btn /></div>
-                    </aside>
-                ))}
-            </div>
+            <div id="wrapper">
+                <div id="content">
+                    <h2>Mes Projets</h2>
+                    <div className="gallery" id="realisations">
+                        {projects.map((project, index) => (
+                            <aside key={index} className="gallery-item" onClick={() => openModal(project)} data-aos="fade-left">
+                                <div className="gallery-item" data-aos="fade-up">
+                                    <h3>{project.title}</h3>
+                                    <img src={project.image} alt={project.title} />
+                                    <div className="Btn"><Btn /></div>
+                                </div>
+                            </aside>
+                        ))}
+                    </div>
 
-            <Modal isOpen={modalOpen} onClose={closeModal} content={selectedProject} />
+                    <Modal isOpen={modalOpen} onClose={closeModal} content={selectedProject} />
+                </div>
+            </div>
+            <div className="scroll">
+                <span>SCROLL</span>
+                <svg viewBox="0 0 24 24">
+                    <line className="st1" x1="12" y1="1" x2="12" y2="22.5" />
+                    <line className="st1" x1="12.1" y1="22.4" x2="18.9" y2="15.6" />
+                    <line className="st1" x1="11.9" y1="22.4" x2="5.1" y2="15.6" />
+                </svg>
+            </div>
         </div>
     );
 }
