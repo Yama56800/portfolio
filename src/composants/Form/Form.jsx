@@ -40,7 +40,7 @@ const Contact = () => {
       {!isSubmitted ? (
       <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-group">
-          <label htmlfor="name" className="label-contact">
+          <label htmlFor="name" className="label-contact">
             
           </label>
           <input
@@ -52,7 +52,7 @@ const Contact = () => {
             {...register('name')}
           />
           {errors.name && <p id="c-yup">{errors.name.message}</p>}
-          <label htmlfor="email" className="label-contact">
+          <label htmlFor="email" className="label-contact">
             
           </label>
           <input
@@ -64,7 +64,7 @@ const Contact = () => {
             {...register('email')}
           />
           {errors.email && <p id="c-yup">{errors.email.message}</p>}
-          <label htmlfor="phone" className="label-contact">
+          <label htmlFor="phone" className="label-contact">
            
           </label>
           <input
@@ -76,7 +76,7 @@ const Contact = () => {
             {...register('phone')}
           />
           {errors.phone && <p id="c-yup">{errors.phone.message}</p>}
-          <label for="Sujet" className="label-contact">
+          <label htmlFor="Sujet" className="label-contact">
             
           </label>
           <select
@@ -90,7 +90,7 @@ const Contact = () => {
             <option value="Autre">Autre</option>
           </select>
 
-          <label htmlfor="message" className="label-contact">
+          <label htmlFor="message" className="label-contact">
             {' '}
             
           </label>
