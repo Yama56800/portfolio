@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import photo from '../../images/photo-profil.jpg';
+import { distribute } from "gsap";
 
 
 export default function About() {
  
 
     return (
+        <div className="out-about">
         <div className="about" id="presentation">
+            
             <h2> Présentation</h2>
             <img className="photo-profil" src={photo} alt="photo de profil" />
             <div className="description">
@@ -18,6 +21,7 @@ export default function About() {
             </div>
             
          
+        </div>
         </div>
     );
 }

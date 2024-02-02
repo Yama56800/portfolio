@@ -1,10 +1,14 @@
-
+.out-about{
+  background-color: #fff;
+}
 .about{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-direction: row;
     background-color: #fff;
     height: 100vh;
+    width: 90%;
      h2{
       display: none;
      }
@@ -19,6 +23,7 @@
         align-items: center;
         justify-content: center;
         width: 25rem;
+        font-size: 1.2rem;
     }
     
 }
@@ -61,13 +66,20 @@ body, html, #app {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100% !important;
     h2{
       display: block;
+      margin-top: 2rem;
+      margin-bottom: -1rem;
     }
     img{
-      height: 40vh;
+      height: 50vh;
       width: 50vw;
+    }
+    .description{
+      width: 60vw;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -81,12 +93,13 @@ body, html, #app {
     height: 100vh;
    
     img{
-      height: 33vh;
+      height: 39vh;
       width: 60vw;
     }
     .description{
       width: 80vw;
       font-size: 1.5rem;
+      margin-bottom: 2rem;
     }
   }
 }

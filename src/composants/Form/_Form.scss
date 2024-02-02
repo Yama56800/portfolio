@@ -82,3 +82,17 @@
      
     }
   }
+  
+  @media (max-width: 568px) {
+     
+    .contact-form {
+      width: 80% !important;
+      margin-bottom: 0rem;
+     
+    }
+    textarea {
+      resize: none;
+      min-height: 42px !important;
+    }
+   
+  }

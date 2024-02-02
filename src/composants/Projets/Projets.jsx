@@ -41,13 +41,11 @@ import argentbank from '../../images/Argentbank/ArgentBank.png';
 import argentbank1 from '../../images/Argentbank/Argentbank1.png';
 import argentbank2 from '../../images/Argentbank/Argentbank2.png';
 
-
-
 function Modal({ isOpen, onClose, content }) {
     if (!isOpen) return null;
 
     return (
-        <div className="modal">
+        <div className="modal modal-overlay">
             <div className="modal-content">
                 <button onClick={onClose}><i className="fa fa-times" aria-hidden="true"></i></button>
                 <h3>{content.title}</h3>
@@ -119,7 +117,7 @@ export default function Projets() {
         },
         {
             title: 'Menu Marker',
-            subTitle: 'Menu Marke',
+            subTitle: 'Menu Marker',
             image: menu_marker,
             images_presentation1: menu_marker1,
             images_presentation2: menu_marker2,
@@ -176,6 +174,23 @@ export default function Projets() {
 
     useEffect(() => {
         AOS.init({ duration: 3000, once: false });
+
+        const handleBodyClick = (e) => {
+            // Gérez ici la logique des clics sur le corps du document
+            // Par exemple, vous pouvez fermer la modal si un clic se produit en dehors de la modal
+            if (!modalOpen) return; // Ne rien faire si la modal n'est pas ouverte
+
+            if (!e.target.closest(".modal-content")) {
+                closeModal();
+            }
+        };
+        document.body.addEventListener("click", handleBodyClick);
+
+        return () => {
+            // Supprime le gestionnaire d'événements lorsque le composant est démonté
+            document.body.removeEventListener("click", handleBodyClick);
+
+        };
     }, []);
 
     const openModal = (project) => {
@@ -185,8 +200,15 @@ export default function Projets() {
 
     const closeModal = () => setModalOpen(false);
 
+    const handleOverlayClick = (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+          closeModal();
+        }
+      };
+    
+
     return (
-        <div className="projets">
+        <div   className="modal-overlay projets" onClick={handleOverlayClick}>
             <div id="wrapper">
                 <div id="content">
                     <h2>Mes Projets</h2>

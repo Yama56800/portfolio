@@ -17,7 +17,22 @@
     h3 {
         display: none;
     }
-
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Assurez-vous qu'il est au-dessus de la modal */
+        cursor: pointer; /* Curseur de main pour indiquer que l'élément est cliquable */
+      }
+      
+      /* Stylez votre modal ici (ajoutez des styles CSS pour .modal) */
+      
     .gallery {
         display: flex;
         flex-direction: row;
@@ -170,40 +185,109 @@
 @media (max-width: 768px) {
    
 
-    .about {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 80vh;
-      h2{
-        display: block;
-      }
-      img{
-        height: 40vh;
-        width: 50vw;
-      }
-    }
+    
+    .gallery {
+        display: flex;
+         flex-wrap: nowrap !important;
+         flex-direction: column !important;
+         width: 100vw;
+         height: 100%;
+        
+         .gallery-item-aside{
+            width: 100%;
+            .gallery-item{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+         }
+         
+         
+        }
+        .modal-content {
+       
+
+    
+            .img-content{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0px;
+        
+                img{
+                    width: 52vw;
+                    max-height: 35vh;
+                }
+            }
+        
+          
+            p {
+                margin-bottom: 20px;
+                width: 100%;
+                font-size: 0.8rem;
+            }
+        
+            a {
+               
+                margin:10px;
+                padding: 15px ;
+            
+            }
+          
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+                border-radius: 0.5rem;
+            }
+        
+           
+        }
+    
   }
   @media (max-width: 568px) {
      
   
-    .gallery {
-    display: flex;
-     flex-wrap: nowrap !important;
-     flex-direction: column !important;
-     width: 100vw;
-     height: 100%;
+    .modal-content {
+       
+
     
-     .gallery-item-aside{
-        width: 100%;
-        .gallery-item{
-            width: 100%;
+        .img-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0px;
+    
+            img{
+                width: 68vw;
+                max-height: 50vh;
+            }
         }
-        img{
+    
+      
+        p {
+            margin-bottom: 20px;
             width: 100%;
+            font-size: 0.8rem;
         }
-     }
-     
-     
+    
+        a {
+           
+            margin:10px;
+            padding: 15px ;
+        
+        }
+      
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 0.5rem;
+        }
+    
+       
     }
   }

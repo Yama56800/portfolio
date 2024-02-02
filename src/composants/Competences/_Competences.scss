@@ -12,6 +12,7 @@
     }
     h2{
         color: white;
+        font-size: 2.4rem;
     }
 
     .competences-item{
@@ -68,3 +69,35 @@
         width: 35%;
     }
 }
+
+@media (max-width: 768px) {
+   
+
+    .competences {
+        
+        .tab-competences{
+            width: 80%;
+            
+            .competences-item{
+                height: 2.5rem;
+                margin: 2.3rem;
+                
+            }
+        }
+     
+    }
+  }
+  @media (max-width: 568px) {
+     
+    .competences {
+        
+        .tab-competences{
+            width: 100%;
+            gap: 3rem;
+            .competences-item{
+                height: 2.5rem;
+                
+            }
+        }
+    }
+  }
