@@ -176,9 +176,6 @@ export default function Projets() {
         AOS.init({ duration: 3000, once: false });
 
         const handleBodyClick = (e) => {
-            // Gérez ici la logique des clics sur le corps du document
-            // Par exemple, vous pouvez fermer la modal si un clic se produit en dehors de la modal
-            if (!modalOpen) return; // Ne rien faire si la modal n'est pas ouverte
 
             if (!e.target.closest(".modal-content")) {
                 closeModal();
@@ -187,7 +184,7 @@ export default function Projets() {
         document.body.addEventListener("click", handleBodyClick);
 
         return () => {
-            // Supprime le gestionnaire d'événements lorsque le composant est démonté
+          
             document.body.removeEventListener("click", handleBodyClick);
 
         };

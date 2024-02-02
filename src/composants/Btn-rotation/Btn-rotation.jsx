@@ -1,5 +1,4 @@
 import React from 'react';
-import git from '../../images/icon/icons8-github.svg'; // Assurez-vous que le chemin est correct
 
 export default function BtnRotation() {
   return (

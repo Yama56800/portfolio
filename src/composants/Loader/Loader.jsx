@@ -4,18 +4,15 @@ const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Utilisez setTimeout pour masquer le loader après 4 secondes
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 4000);
 
-    // Nettoyez le timer lors du démontage du composant
     return () => {
       clearTimeout(timer);
     };
   }, []);
 
-  // Affichez le loader seulement lorsque isLoading est true
   return (
     isLoading && (
     <div className="loader-container">

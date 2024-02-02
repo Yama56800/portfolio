@@ -6,9 +6,8 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = 1010; // Changer la valeur de déclenchement en pixels selon vos besoins
-
-      // Activez le style collant si la position de défilement dépasse le point de déclenchement
+      const triggerPoint = 1010; 
+      
       setIsSticky(scrollY > triggerPoint);
     };
 

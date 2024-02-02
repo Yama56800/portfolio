@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { neonCursor } from 'threejs-toys'; // Ajustez selon le nom d'export correct
+import { neonCursor } from 'threejs-toys'; 
 
 export default function Welcome() {
     useEffect(() => {

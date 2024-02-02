@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import photo from '../../images/photo-profil.jpg';
-import { distribute } from "gsap";
 
 
 export default function About() {

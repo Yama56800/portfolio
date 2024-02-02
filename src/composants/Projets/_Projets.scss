@@ -23,15 +23,15 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+        background-color: rgba(0, 0, 0, 0.5); 
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000; /* Assurez-vous qu'il est au-dessus de la modal */
-        cursor: pointer; /* Curseur de main pour indiquer que l'élément est cliquable */
+        z-index: 1000; 
+        cursor: pointer; 
       }
       
-      /* Stylez votre modal ici (ajoutez des styles CSS pour .modal) */
+     
       
     .gallery {
         display: flex;

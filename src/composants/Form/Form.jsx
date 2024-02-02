@@ -22,13 +22,13 @@ const Contact = () => {
   const onSubmit = data => {
     const templateId = 'template_5yb1elr';
     const serviceId = 'service_5ekk2xg';
-    const userId = '1pE5dkAnWFR8sGczr'; // Remplacez ces valeurs par vos identifiants réels
+    const userId = '1pE5dkAnWFR8sGczr'; 
 
     emailjs.send(serviceId, templateId, data, userId)
       .then((response) => {
         console.log('Message sent successfully', response.status, response.text);
-        setIsSubmitted(true); // Mettre à jour l'état pour indiquer l'envoi réussi
-        reset(); // Réinitialiser le formulaire
+        setIsSubmitted(true); 
+        reset(); 
       })
       .catch((err) => console.error('Failed to send the message, error:', err));
   };
