@@ -176,6 +176,8 @@ export default function Projets() {
         AOS.init({ duration: 3000, once: false });
 
         const handleBodyClick = (e) => {
+            
+            if (!modalOpen) return; 
 
             if (!e.target.closest(".modal-content")) {
                 closeModal();
@@ -184,7 +186,7 @@ export default function Projets() {
         document.body.addEventListener("click", handleBodyClick);
 
         return () => {
-          
+            
             document.body.removeEventListener("click", handleBodyClick);
 
         };
