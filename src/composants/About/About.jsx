@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import photo from '../../images/photo-profil.avif';
+import photo from '../../images/photo-profil.jpg';
 
 
 export default function About() {
@@ -7,7 +7,7 @@ export default function About() {
 
     return (
         <div className="about" id="presentation">
-            
+            <h2> Présentation</h2>
             <img className="photo-profil" src={photo} alt="photo de profil" />
             <div className="description">
                 <p>Je suis Thomas Mahias, un développeur frontend débutant. Passionné par la création d'expériences 

@@ -1,9 +1,12 @@
 .competences{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #151515;
     padding-top: 3rem;
     width: 100%;
+    height: 100vh;
     .tab-competences{
         width: 80%;
     }

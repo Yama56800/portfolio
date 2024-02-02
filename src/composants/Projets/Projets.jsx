@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 
 import Btn from '../Btn-rotation/Btn-rotation';
@@ -40,10 +38,10 @@ import events1 from '../../images/724_Events/724events1.png';
 import events2 from '../../images/724_Events/724events2.png';
 
 import argentbank from '../../images/Argentbank/ArgentBank.png';
-import argentbank1 from '../../images/Argentbank/ArgentBank.png';
-import argentbank2 from '../../images/Argentbank/ArgentBank.png';
+import argentbank1 from '../../images/Argentbank/Argentbank1.png';
+import argentbank2 from '../../images/Argentbank/Argentbank2.png';
 
-import data from '../../../src/data.json';
+
 
 function Modal({ isOpen, onClose, content }) {
     if (!isOpen) return null;
@@ -60,8 +58,10 @@ function Modal({ isOpen, onClose, content }) {
                 </div>
                 <p>{content.description}</p>
                 <div className="link-content">
-                    <a href={content.siteUrl} target="_blank" rel="noopener noreferrer">Visiter le Site</a>
-                    <a href={content.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                    {!content.hideSiteLink && (
+                        <a className="site" href={content.siteUrl} target="_blank" rel="noopener noreferrer">Visiter le Site</a>
+                    )}
+                    <a className="git" href={content.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
@@ -71,8 +71,6 @@ function Modal({ isOpen, onClose, content }) {
 export default function Projets() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState({});
-    const content = document.querySelector('#content');
-
     
     const projects = [
         {
@@ -81,9 +79,10 @@ export default function Projets() {
             image: booki,
             images_presentation1: booki1,
             images_presentation2: booki2,
-            description: 'Description de Booki.',
-            siteUrl: 'https://booki.com',
-            githubUrl: 'https://github.com/user/booki',
+            description: "Booki, un site d'hébergement et une agence de voyage, a été créé en utilisant uniquement HTML et CSS. Pendant la conception de Booki, j'ai acquis de l'expérience dans la manipulation du CSS sous divers aspects, notamment l'intégration d'icônes, d'images, de boutons et même la création de barres de recherche.",
+            siteUrl: ' https://yama56800.github.io/Booki/',
+            githubUrl: 'https://github.com/Yama56800/Booki',
+            hideSiteLink: false,
         },
         {
             title: 'Ohmyfood',
@@ -91,9 +90,10 @@ export default function Projets() {
             image: ohmyfood,
             images_presentation1: ohmyfood1,
             images_presentation2: ohmyfood2,
-            description: 'Description de Ohmyfood.',
-            siteUrl: 'https://ohmyfood.com',
-            githubUrl: 'https://github.com/user/ohmyfood',
+            description: "Oh My Food est un site de réservation de menus en ligne pour différents restaurants, créé en utilisant HTML et SCSS. Pendant la conception de ce site, j'ai acquis de nouvelles compétences, notamment en matière d'animations, de boutons animés, d'icônes animées et même de rotations.",
+            siteUrl: 'https://yama56800.github.io/ohmyfood/',
+            githubUrl: 'https://github.com/Yama56800/ohmyfood',
+            hideSiteLink: false,
         },
         {
             title: 'Print it!',
@@ -101,9 +101,10 @@ export default function Projets() {
             image: print_it,
             images_presentation1: print_it1,
             images_presentation2: print_it2,
-            description: 'Description de Print it!.',
-            siteUrl: 'https://printit.com',
-            githubUrl: 'https://github.com/user/printit',
+            description: "Print it!, un site d'entreprise d'impression, a été conçu en utilisant HTML et CSS. Lors de mon intervention sur leur site, j'ai intégré un carrousel en JavaScript avec des points cliquables et des flèches pour diriger le carrousel. Chaque diapositive défile automatiquement.",
+            siteUrl: 'https://yama56800.github.io/print/',
+            githubUrl: 'https://github.com/Yama56800/print',
+            hideSiteLink: false,
         },
         {
             title: 'Sophie Bluel',
@@ -111,88 +112,70 @@ export default function Projets() {
             image: sophie_bluel,
             images_presentation1: sophie_bluel1,
             images_presentation2: sophie_bluel2,
-            description: 'Description de Sophie Bluel.',
-            siteUrl: 'https://sophiebluel.com',
-            githubUrl: 'https://github.com/user/sophiebluel',
+            description: "Le portfolio de Sophie Bluel est un site dynamique conçu en HTML, CSS et JavaScript. Lors de mon intervention sur ce site déjà existant, j'ai créé une galerie dynamique. À l'origine, le site ne comportait qu'une simple galerie d'images. J'ai ajouté des fonctionnalités permettant de trier les images, d'en ajouter à partir de l'ordinateur de l'utilisateur et de les supprimer en utilisant des appels API. Un système de connexion avec un token a également été intégré, permettant à la propriétaire du site de seule d'apporter des modifications.",
+            siteUrl: '#',
+            githubUrl: 'https://github.com/Yama56800/P6',
+            hideSiteLink: true,
         },
         {
             title: 'Menu Marker',
-            subTitle: 'Sous-titre de Menu Marker',
+            subTitle: 'Menu Marke',
             image: menu_marker,
             images_presentation1: menu_marker1,
             images_presentation2: menu_marker2,
-            description: 'Description de Menu Marker.',
-            siteUrl: 'https://menumarker.com',
-            githubUrl: 'https://github.com/user/menumarker',
+            description: "Menu Maker est une application de création de menus. Pour ce projet, je n'ai pas effectué la programmation du site, mais j'y ai participé en tant que chef de projet. J'ai mis en place une veille technique et un tableau Kanban pour découper les différentes tâches du projet. De plus, j'ai acquis des compétences en présentation à l'aide de PowerPoint, car j'ai dû présenter de nombreuses informations à l'équipe.",
+            siteUrl: '#',
+            githubUrl: 'https://trello.com/b/2Pt8SZLC/menu-marker',
+            hideSiteLink: true,
         },
         {
             title: 'Kasa',
-            subTitle: 'Sous-titre de Kasa',
+            subTitle: 'Kasa',
             image: kasa,
             images_presentation1: kasa1,
             images_presentation2: kasa2,
-            description: 'Description de Kasa.',
-            siteUrl: 'https://kasa.com',
-            githubUrl: 'https://github.com/user/kasa',
+            description: "Kasa, un site d'annonces d'hébergement de particulier à particulier, a été conçu en utilisant React. Lors de la conception de ce site, j'ai parcouru une base de données pour récupérer de nombreuses informations pour chaque annonce, chacune contenant plusieurs détails. J'ai également créé différents composants React et un design en SCSS afin de créer une application évolutive.",
+            siteUrl: '#',
+            githubUrl: 'https://github.com/Yama56800/Kasav1',
+            hideSiteLink: true,
         },
         {
             title: 'Nina Carducci',
-            subTitle: 'Sous-titre de Nina Carducci',
+            subTitle: 'Nina Carducci',
             image: nina_carducci,
             images_presentation1: nina_carducci1,
             images_presentation2: nina_carducci2,
-            description: 'Description de Nina Carducci.',
-            siteUrl: 'https://ninacarducci.com',
-            githubUrl: 'https://github.com/user/ninacarducci',
+            description: "J'ai amélioré les performances et le référencement SEO du portfolio de la photographe professionnelle Nica Carducci. J'ai optimisé les images pour réduire leur taille, ajouté des rich snippets pour le référencement local en tant que photographe, et résolu les problèmes d'accessibilité et de SEO en utilisant des outils comme Waves et Google Lighthouse.",
+            siteUrl: 'https://yama56800.github.io/Nina-Carducci/',
+            githubUrl: 'https://github.com/Yama56800/Nina-Carducci',
+            hideSiteLink: false,
         },
         {
             title: '724 Events',
-            subTitle: 'Sous-titre de 724 Events',
+            subTitle: '724 Events',
             image: events,
             images_presentation1: events1,
             images_presentation2: events2,
-            description: 'Description de 724 Events.',
-            siteUrl: 'https://724events.com',
-            githubUrl: 'https://github.com/user/724events',
+            description: "J'ai corrigé les nombreux bugs du site de l'agence d'événementiel 77 Events, laissés par un développeur précédent. J'ai effectué des tests unitaires et fonctionnels, notamment pour le carrousel et la galerie d'événements, en résolvant avec succès les problèmes liés à la sélection d'événements et aux listes d'éléments.",
+            siteUrl: '#',
+            githubUrl: 'https://github.com/Yama56800/P10-debug',
+            hideSiteLink: true,
         },
         {
             title: 'Argent Bank',
-            subTitle: 'Sous-titre de Argent Bank',
+            subTitle: 'Argent Bank',
             image: argentbank,
             images_presentation1: argentbank1,
             images_presentation2: argentbank2,
-            description: 'Description de Argent Bank.',
-            siteUrl: 'https://argentbank.com',
-            githubUrl: 'https://github.com/user/argentbank',
+            description: "J'ai transformé ArgentBank, une application bancaire initialement composée de seulement 3 pages HTML et de CSS, en une application React. J'ai découpé les pages HTML en composants, intégré Redux pour gérer l'état global, et mis en place un système d'authentification pour les utilisateurs. J'ai également créé des routes API pour de futures fonctionnalités telles que la visualisation des transactions, la gestion des transactions mensuelles, la modification des transactions, les catégories personnalisées et les notes, entre autres.",
+            siteUrl: '#',
+            githubUrl: 'https://github.com/Yama56800/ArgentBank-website',
+            hideSiteLink: true,
         },
     ];
 
     useEffect(() => {
-        AOS.init({
-            duration: 3000,
-            once: false,
-        });
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Créez vos éléments "circle" ici (code pour créer des cercles).
-
-        const Circles = document.querySelectorAll('.circle');
-
-        const main = gsap.timeline({
-            scrollTrigger: {
-                scrub: 0.7,
-                start: "top 25%",
-                end: "bottom bottom"
-            }
-        });
-
-        Circles.forEach((circle) => {
-            main.to(circle, {
-                opacity: 1,
-            });
-        });
-
+        AOS.init({ duration: 3000, once: false });
     }, []);
 
     const openModal = (project) => {
@@ -209,7 +192,7 @@ export default function Projets() {
                     <h2>Mes Projets</h2>
                     <div className="gallery" id="realisations">
                         {projects.map((project, index) => (
-                            <aside key={index} className="gallery-item" onClick={() => openModal(project)} data-aos="fade-left">
+                            <aside key={index} className="gallery-item-aside" onClick={() => openModal(project)} data-aos="fade-left">
                                 <div className="gallery-item" data-aos="fade-up">
                                     <h3>{project.title}</h3>
                                     <img src={project.image} alt={project.title} />
@@ -218,17 +201,8 @@ export default function Projets() {
                             </aside>
                         ))}
                     </div>
-
                     <Modal isOpen={modalOpen} onClose={closeModal} content={selectedProject} />
                 </div>
-            </div>
-            <div className="scroll">
-                <span>SCROLL</span>
-                <svg viewBox="0 0 24 24">
-                    <line className="st1" x1="12" y1="1" x2="12" y2="22.5" />
-                    <line className="st1" x1="12.1" y1="22.4" x2="18.9" y2="15.6" />
-                    <line className="st1" x1="11.9" y1="22.4" x2="5.1" y2="15.6" />
-                </svg>
             </div>
         </div>
     );

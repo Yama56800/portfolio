@@ -7,6 +7,7 @@
 
     h2 {
         color: white;
+        font-size: 2.5rem;
         justify-content: center;
         align-items: center;
         margin-bottom: 5rem;
@@ -20,6 +21,7 @@
     .gallery {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
         width: 70vw;
@@ -29,8 +31,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20rem;
-            height: 10rem;
+            width: 30vw;
+            height: 28vh;
             opacity: 0;
             transition:  0.5s ease-in-out;
 
@@ -77,8 +79,8 @@
         }
 
         img {
-            width: 20rem;
-            height: 10rem;
+            width: 30vw;
+            height: 28vh;
             border-radius: 0.5rem;
         }
     }
@@ -97,8 +99,12 @@
 }
 
 .modal-content {
-    background-color: white;
-    
+    position: relative;
+    background-color: #AFBC88;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -114,107 +120,90 @@
 
         img{
             width: 33vw;
+            max-height: 50vh;
         }
     }
 
-    h3, h4 {
-        margin: 10px 0;
+    h3, h4 {  
+        margin-bottom: 2rem;
+        font-size: 2rem;
     }
 
     p {
         margin-bottom: 20px;
+        width: 70%;
     }
 
     a {
         display: inline-block;
-        margin: 0 10px;
-        padding: 10px 20px;
-        background-color: grey;
+        margin:1rem;
+        padding: 50px ;
+        background-color: #111D13;
         color: white;
-        border-radius: 5px;
+        border-radius: 23% 77% 22% 78% / 48% 52% 48% 52% ;
         text-decoration: none;
-
+        
         &:hover {
             background-color: grey;
         }
     }
-
+    .git{
+        border-radius:65% 35% 34% 66% / 59% 19% 81% 41% ;
+    }
     img {
         max-width: 100%;
         height: auto;
         margin-bottom: 20px;
+        border-radius: 0.5rem;
     }
 
     button {
         
-        display: block;
-        background: white;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        background: transparent;
         font-size: 1rem;
         cursor: pointer;
     }
 }
+@media (max-width: 768px) {
+   
 
-body {
-    &:before, &:after {
-      content: "";
-      position: fixed;
-      z-index: 10;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-    }
-    &:after {
-      top: auto;
-      bottom: 0;
+    .about {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      h2{
+        display: block;
+      }
+      img{
+        height: 40vh;
+        width: 50vw;
+      }
     }
   }
+  @media (max-width: 568px) {
+     
   
-  .scroll {
-    width: 100%;
-    height: 100vh;
+    .gallery {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 1;
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0.2em;
-    font-size: 11px;
-    display: none;
-  
-    span {
-      display: block;
-    }
-  
-    svg {
-      margin-top: 10px;
-      width: 18px;
-      height: 18px;
-      animation: scroll 0.95s ease-in-out alternate infinite;
-      fill: none;
-      stroke: #000000;
-      stroke-linecap: round;
-      stroke-miterlimit: 10;
-      stroke-width: 1;
-    }
-  }
-  
-  .circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 40%;
-    opacity: 0;
-    margin: -19px auto;
-    transition: transform 1s cubic-bezier(0.14, 0.15, 0.13, 0.99);
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(10px);
+     flex-wrap: nowrap !important;
+     flex-direction: column !important;
+     width: 100vw;
+     height: 100%;
+    
+     .gallery-item-aside{
+        width: 100%;
+        .gallery-item{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+     }
+     
+     
     }
   }

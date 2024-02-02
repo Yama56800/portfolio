@@ -4,8 +4,13 @@
     justify-content: space-evenly;
     flex-direction: row;
     background-color: #fff;
-    
-
+    height: 100vh;
+     h2{
+      display: none;
+     }
+    img{
+      height: 60vh;
+    }
     .photo-profil{
         margin: 50px;
     }
@@ -48,4 +53,40 @@ body, html, #app {
   model-viewer {
     height: 500PX;
     width: 500PX;
+}
+@media (max-width: 768px) {
+   
+
+  .about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    h2{
+      display: block;
+    }
+    img{
+      height: 40vh;
+      width: 50vw;
+    }
+  }
+}
+@media (max-width: 568px) {
+   
+
+  .about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    img{
+      height: 33vh;
+      width: 60vw;
+    }
+    .description{
+      width: 80vw;
+      font-size: 1.5rem;
+    }
+  }
 }
