@@ -28,7 +28,7 @@
         padding-right: 1rem;
         
         
-
+        
         p{
             display: flex;
             color: white;
@@ -46,28 +46,41 @@
     }
     .html p{
         background-color: #E34F26;
-        width: 93%;
+        width: 97%;
     }
     .css p{
         background-color: #1572B6;
-        width: 93%;
+        width: 97%;
     }
     .scss p{
         background-color: #C6538C;
-        width: 83%;
+        width: 93%;
     }
     .javascript p{
         background-color: #F7DF1E;
-        width: 79%;
+        width: 83%;
     }
     .react p{
         background-color: #61DAFB;
-        width: 67%;
+        width: 77%;
     }
     .redux p{
         background-color: #764ABC;
-        width: 35%;
+        width: 55%;
     }
+    .seo p{
+        background-color: #50C878;
+        width: 65%;
+    }
+    .green p{
+        background-color: #228B22;
+        width: 85%;
+    }
+    .responsive p{
+        background-color: #40E0D0;
+        width: 97%;
+    }
+    
 }
 
 @media (max-width: 768px) {
