@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yama56800.github.io/portfolio/",
+  "homepage": "https://yama56800.github.io/test-portfolio-online/",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@google/model-viewer": "^3.4.0",
