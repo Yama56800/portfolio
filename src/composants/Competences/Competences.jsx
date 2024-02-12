@@ -13,7 +13,7 @@ export default function Competences() {
           97%
         </li>
         <li className="competences-item responsive">
-          <p>Responsive</p>
+          <p><i class="fa-light fa-laptop-mobile"></i>Responsive</p>
           97%
         </li>
         <li className="competences-item scss">
@@ -33,11 +33,11 @@ export default function Competences() {
           77%
         </li>
         <li className="competences-item seo">
-          <p>Référencement SEO</p>
+          <p><i class="fa-regular fa-user-magnifying-glass"></i>Référencement SEO</p>
           65%
         </li>
         <li className="competences-item redux">
-          <p>REDUX</p>
+          <p><i class="fa-light fa-users-gear"></i>REDUX</p>
           55%
         </li>
         
