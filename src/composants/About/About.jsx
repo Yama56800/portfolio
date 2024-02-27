@@ -7,9 +7,10 @@ export default function About() {
 
     return (
         <div className="out-about">
+             <h2> Présenton Nous !</h2>
         <div className="about" id="presentation">
             
-            <h2> Présentation</h2>
+           
             <img className="photo-profil" src={photo} alt="photo de profil" />
             <div className="description">
                 <p>Je suis Thomas Mahias, un développeur front-end junior. Passionné par la création d'expériences 

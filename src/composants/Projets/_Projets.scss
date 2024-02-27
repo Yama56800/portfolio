@@ -97,6 +97,8 @@
             width: 30vw;
             height: 28vh;
             border-radius: 0.5rem;
+            object-fit: cover;
+            min-width: 335px;
         }
     }
 }
@@ -170,6 +172,7 @@
         height: auto;
         margin-bottom: 20px;
         border-radius: 0.5rem;
+        
     }
 
     button {
@@ -182,7 +185,7 @@
         cursor: pointer;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
    
 
     
@@ -223,8 +226,9 @@
                 gap: 0px;
         
                 img{
-                    width: 52vw;
-                    max-height: 35vh;
+                    width: 50vw;
+                    max-height: 25vh;
+                    
                 }
             }
         
@@ -239,6 +243,8 @@
                
                 margin:10px;
                 padding: 15px ;
+                text-decoration: none;
+               
             
             }
           
@@ -268,8 +274,8 @@
             gap: 0px;
     
             img{
-                width: 68vw;
-                max-height: 30vh;
+                width: 58vw;
+                max-height: 25vh;
             }
         }
     
