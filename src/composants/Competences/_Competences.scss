@@ -1,3 +1,6 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 .competences{
     display: flex;
     flex-direction: column;
@@ -29,8 +32,6 @@
         align-items: center;
         padding-right: 1rem;
         
-        
-        
         p{
             display: flex;
             color: white;
@@ -41,7 +42,7 @@
             height: 100%;
             padding-left: 1rem;
         }
-       
+ 
     }
     .competences-item-last{
        margin-bottom: 100px;
@@ -57,6 +58,7 @@
     .scss p{
         background-color: #C6538C;
         width: 90%;
+        
     }
     .javascript p{
         background-color: #F7DF1E;

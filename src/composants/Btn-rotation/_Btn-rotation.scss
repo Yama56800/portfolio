@@ -10,13 +10,14 @@ $accentColor: #E8D6C1;
 
 
 .link {
-	width: 7rem;
+	width: 9rem;
 	height: 10rem;
 	
-	font: 300 1.55rem/1.4 "Josefin Sans"; 
+	font: 300 1.3rem "Josefin Sans"; 
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1175em;
-	word-spacing: 0.3em;
+	word-spacing: 0.7em;
 	text-decoration: none;
     display: flex;
     justify-content: center;

@@ -174,7 +174,6 @@
         border-radius: 0.5rem;
         
     }
-
     button {
         
         position: absolute;
@@ -187,8 +186,6 @@
 }
 @media (max-width: 1024px) {
    
-
-    
     .gallery {
         display: flex;
          flex-wrap: nowrap !important;
@@ -211,13 +208,11 @@
                 width: 100%;
             }
          }
-         
-         
         }
         .modal-content {
             max-height: 80vh;
+            max-width: 60vw;
 
-    
             .img-content{
                 display: flex;
                 align-items: center;
@@ -226,19 +221,17 @@
                 gap: 0px;
         
                 img{
-                    width: 50vw;
-                    max-height: 25vh;
+                    width: 40vw;
+                    max-height: 20vh;
+                    object-fit: contain;
                     
                 }
             }
-        
-          
             p {
                 margin-bottom: 20px;
                 width: 100%;
                 font-size: 0.8rem;
             }
-        
             a {
                
                 margin:10px;
