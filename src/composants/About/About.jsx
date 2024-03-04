@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import photo from '../../images/photo-profil.jpg';
 
 
@@ -7,7 +7,7 @@ export default function About() {
 
     return (
         <div className="out-about">
-             <h2> Présenton Nous !</h2>
+             <h2> Présentons Nous !</h2>
         <div className="about" id="presentation">
             
            
