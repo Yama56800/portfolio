@@ -212,7 +212,7 @@
          }
         }
         .modal-content {
-            max-height: 80vh;
+            max-height: 90vh;
             max-width: 60vw;
 
             .img-content{
@@ -269,8 +269,12 @@
   
     .modal-content {
        
-        max-height: 80vh;
+        max-height: 90vh;
             max-width: 90vw;
+
+            h4{
+                font-size: 1.5rem;
+            }
     
         .img-content{
             display: flex;
@@ -281,7 +285,11 @@
     
             img{
                 width: 58vw;
-                max-height: 25vh;
+                max-height: 22vh;
+            }
+          
+            i{
+                color: black;
             }
         }
     
