@@ -117,7 +117,7 @@
 
 .modal-content {
     position: relative;
-    background-color: #AFBC88;
+    background: linear-gradient(to bottom, #2B2D31 0%, #ffffff 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,6 +127,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 75%; ; 
     text-align: center;
+    box-shadow: 5px -10px 20px rgba(255, 255, 255, 0.4);
 
     .img-content{
         display: flex;
@@ -144,6 +145,7 @@
     h3, h4 {  
         margin-bottom: 2rem;
         font-size: 2rem;
+        color: #ffffff;
     }
 
     p {
@@ -155,13 +157,15 @@
         display: inline-block;
         margin:1rem;
         padding: 50px ;
-        background-color: #111D13;
+        background-color: #0B2939;
         color: white;
         border-radius: 23% 77% 22% 78% / 48% 52% 48% 52% ;
         text-decoration: none;
-        
+        transition: background-color 0.5s, color 0.5s; 
         &:hover {
-            background-color: grey;
+            background-color: #BCDDEE;
+            color: #000;
+            
         }
     }
     .git{
@@ -175,7 +179,7 @@
         
     }
     button {
-        
+        color: #ffffff;
         position: absolute;
         top: 10px;
         left: 15px;

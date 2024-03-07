@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import logo from'../../logo.webp';
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
@@ -20,6 +20,7 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
+      <i className="logo"><img src={logo} alt="logo" /></i>
       <ul className="navbar-nav">
         <li className="nav-item">
           <a href="#accueil" className="nav-link">
