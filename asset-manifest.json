@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f5ae7aa8.css",
-    "main.js": "/static/js/main.c757bad6.js",
+    "main.css": "/static/css/main.003bc266.css",
+    "main.js": "/static/js/main.092276f5.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/print_it1.png": "/static/media/print_it1.ef5c67a6d93dfafcd7ce.png",
     "static/media/ohmyfood2.png": "/static/media/ohmyfood2.7c49c32b3caba123af1e.png",
@@ -10,12 +10,14 @@
     "static/media/nina_carducci1.png": "/static/media/nina_carducci1.07f6f0e2a88b9b42fe41.png",
     "static/media/sophie_bluel1.png": "/static/media/sophie_bluel1.ef7efe13e4caeb781b6b.png",
     "static/media/Booki2.png": "/static/media/Booki2.8404b5f358074958728c.png",
+    "static/media/photo-profil.jpg": "/static/media/photo-profil.9344665d9fc436f5ec38.jpg",
     "static/media/kasa2.png": "/static/media/kasa2.ab6e84c9b5f0b7c2a382.png",
     "static/media/booki1.png": "/static/media/booki1.35ee86b992c059873d95.png",
     "static/media/print_it2.png": "/static/media/print_it2.d93b5adea0de5bb1ba53.png",
-    "static/media/photo-profil.jpg": "/static/media/photo-profil.a2d84153bf9f108260ee.jpg",
     "static/media/ohmyfood1.png": "/static/media/ohmyfood1.fd866fc1e6cf6111580b.png",
     "static/media/menu_marker1.png": "/static/media/menu_marker1.4084e306a83042891cad.png",
+    "static/media/bg-velour.webp": "/static/media/bg-velour.52fffeb59fa5caa6e881.webp",
+    "static/media/logo.webp": "/static/media/logo.76c2718389b881ce12e8.webp",
     "static/media/menu_marker2.png": "/static/media/menu_marker2.9c882449bb5d93488093.png",
     "static/media/nina_carducci2.png": "/static/media/nina_carducci2.d69eb48c35c5ad28c848.png",
     "static/media/Argentbank2.png": "/static/media/Argentbank2.3ca2a86ce67a3def2db8.png",
@@ -33,12 +35,12 @@
     "index.html": "/index.html",
     "static/media/icons8-github.svg": "/static/media/icons8-github.e7e2bc8e3b94958f09a23ee8a5aaae7a.svg",
     "static/media/icons8-linkedin.svg": "/static/media/icons8-linkedin.9d8bea6ae8a383fb70ac255adc82a0db.svg",
-    "main.f5ae7aa8.css.map": "/static/css/main.f5ae7aa8.css.map",
-    "main.c757bad6.js.map": "/static/js/main.c757bad6.js.map",
+    "main.003bc266.css.map": "/static/css/main.003bc266.css.map",
+    "main.092276f5.js.map": "/static/js/main.092276f5.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5ae7aa8.css",
-    "static/js/main.c757bad6.js"
+    "static/css/main.003bc266.css",
+    "static/js/main.092276f5.js"
   ]
 }
