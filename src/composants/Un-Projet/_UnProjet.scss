@@ -38,3 +38,18 @@
         }
     }
 }
+@media (max-width: 1068px) {
+   .Unprojet{
+
+    .Unprojet-content{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .box{
+            max-width: 80vw;
+            margin-bottom: 1.5rem;
+        }
+    }
+   }
+  }
