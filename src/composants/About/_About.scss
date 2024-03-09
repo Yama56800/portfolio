@@ -93,7 +93,7 @@ body, html, #app {
     
   }
 
-@media (max-width: 768px) {
+@media (max-width: 1068px) {
    
 
   .about {
@@ -101,17 +101,18 @@ body, html, #app {
     justify-content: center;
     align-items: center;
     height: 100% !important;
+    .about-content{
+      
+      flex-direction: column;
+    }
     h2{
       display: block;
       margin-top: 2rem;
       margin-bottom: -1rem;
     }
-    img{
-      height: 50vh;
-      width: 50vw;
-    }
+    
     .description{
-      width: 60vw;
+      width: 70vw !important;
       font-size: 1.5rem;
       margin-bottom: 2.5rem;
     }
@@ -131,8 +132,9 @@ body, html, #app {
     }
    
     img{
-      height: 39vh;
-      width: 60vw;
+      height: 100% !important;
+      width: 80vw;
+      object-fit: contain !important;
     }
     .description{
       width: 80vw;
