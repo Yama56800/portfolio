@@ -5,9 +5,10 @@ import About from './composants/About/About'
 import Projets from './composants/Projets/Projets';
 import Competences from './composants/Competences/Competences';
 import Welcome from './composants/Welcome/Welcome';
+import UnProjet from './composants/Un-Projet/UnProjet';
 import Form from './composants/Form/Form';
 import Footer from './composants/Footer/Footer';
-import Btn_Footer from './composants/Btn-Footer/Btn-Footer';
+import BtnFooter from './composants/Btn-Footer/Btn-Footer';
 function App() {
   return (
     <div className="App">
@@ -17,9 +18,10 @@ function App() {
       <About />
       <Projets />
       <Competences />
+      <UnProjet />
       <Form />
       <Footer />
-      <Btn_Footer />
+      <BtnFooter />
     </div>
   );
 }

@@ -14,10 +14,11 @@ export default function About() {
             <div className="about-content">
             <img className="photo-profil" src={photo} alt="photo de profil" />
             <div className="description">
-                <p>Je suis Thomas Mahias, un développeur front-end junior. Passionné par la création d'expériences 
-                    web de qualité, j'utilise HTML, CSS et JavaScript pour donner vie à des designs innovants.
-                     Mon approche se concentre sur la performance, l'accessibilité et l'adaptabilité aux évolutions 
-                     de l'industrie. Je suis ouvert aux collaborations et prêt à contribuer à des projets excitants.
+                <p>
+                    Moi ? C'est Thomas Mahias, développeur front-end avec une solide expérience en React. Je crée des sites web qui sont à la fois esthétiques et 
+                    fonctionnels, en m'appuyant sur des fondamentaux tels que HTML, CSS, et JavaScript. Mon objectif est de construire des expériences web fluides
+                    et réactives, en accord avec les besoins spécifiques de chaque projet. Je suis toujours à la recherche de nouvelles collaborations pour apporter
+                    ma contribution à des projets innovants.
                 </p>
                 </div>
             </div>

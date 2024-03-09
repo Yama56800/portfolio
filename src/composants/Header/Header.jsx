@@ -43,6 +43,11 @@ export default function Navbar() {
           </a>
         </li>
         <li className="nav-item">
+          <a href="#Unprojet" className="nav-link">
+            Un Projet ?
+          </a>
+        </li>
+        <li className="nav-item">
           <a href="#contact" className="nav-link">
             Contact
           </a>

@@ -23,12 +23,12 @@
     .competences-item{
         display: flex;
         border-radius: 0.5rem;
-        background-color: white;
+        background-color: transparent;
         margin: 2rem;
         height: 2rem;
         overflow: hidden; 
         position: relative; 
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding-right: 1rem;
         
@@ -64,19 +64,19 @@
     }
     .javascript p{
         background-color: #F7DF1E;
-        width: 83%;
+        width: 90%;
     }
     .react p{
         background-color: #61DAFB;
-        width: 77%;
+        width: 90%;
     }
     .redux p{
         background-color: #764ABC;
-        width: 55%;
+        width: 75%;
     }
     .seo p{
         background-color: #50C878;
-        width: 65%;
+        width: 80%;
     }
     .green p{
         background-color: #228B22;
