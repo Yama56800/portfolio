@@ -2,7 +2,10 @@ import React from 'react';
 
 const Header = () => {
   return (
+  <div>
+    <div className='block'></div>
     <div className="headerphone">
+       
       <div className='headerphone-content'>
         <svg
           className="waves"
@@ -27,6 +30,7 @@ const Header = () => {
         </svg>
       </div>
       
+    </div>
     </div>
     
   );
