@@ -1,0 +1,25 @@
+.welcomephone{
+    background: #979797;
+    padding: 8rem;
+    margin: 0;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    .welcomephone-content{
+        height: 40vh;
+        width:70vw ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .welcomephone-title{
+            color: #fff;
+            width:70vw ;
+            font-size: 2rem;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .welcomephone{
+        display: none;
+    }
+}

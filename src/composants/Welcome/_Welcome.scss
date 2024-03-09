@@ -81,6 +81,7 @@ body, html, #app {
       margin: 0;
       padding: 0;
       height: 100vh;
+      display: none;
       
   }
     h1 {
@@ -89,7 +90,8 @@ body, html, #app {
     }
   }
   @media (max-width:568px) {
-  
+    
+   
   
     h1 {
       font-size: 2rem;
