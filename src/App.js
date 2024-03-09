@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Loader />
-      <Welcome />
+    
       <HeaderPhone />
       <WelcomePhone />
       <Header />

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #151515;
+    background: linear-gradient(to top, #151515 90%, #fff 100%);
     padding-top: 5rem;
     color: #f8f8f8;
   
@@ -18,7 +18,7 @@
         color: #f8f8f8;
         margin-bottom: 1.5rem;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 300;
         letter-spacing: 1.5px;
       }
@@ -51,7 +51,8 @@
   
           textarea {
             resize: none;
-            min-height: 120px;
+            min-height: 80px;
+            max-height: 100px;
           }
         }
   

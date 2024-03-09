@@ -1,9 +1,9 @@
 .Unprojet{
-    padding-top: 13rem;
-    background-color: #151515;
+    background-color: #fff;
+    
     h2{
-        color: #fff;
-        padding: 3rem;
+        color: #212121;
+        padding: 5rem;
         font-size: 2.4rem;
 
     }
@@ -13,13 +13,16 @@
         justify-content: space-around;
         padding-left: 3rem;
         padding-right: 3rem;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
         
         .box{
             max-width: 20vw;
-            background-color:#fff;
+            background-color:#212121;
             padding: 2rem;
             border-radius: 1rem;
-
+            cursor: auto;
+            color: #fff;
             h3{
                 padding-bottom: 2rem;
             }

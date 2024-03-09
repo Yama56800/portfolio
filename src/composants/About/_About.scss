@@ -8,6 +8,10 @@
       font-size: 2.5rem;
   }
 }
+span{
+  color: #E5B5D1;
+  font-weight: bold;
+}
 .about{
     display: flex;
     position: relative;
@@ -54,6 +58,7 @@
         justify-content: center;
         width: 40vw;
         font-size: 1.2rem;
+        line-height: 1.5;
         
     }
   }

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import logo from'../../logo.webp';
+import logo from'../../logo-trans.webp';
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = 1010; 
+      const triggerPoint = 0; 
       
       setIsSticky(scrollY > triggerPoint);
     };
@@ -22,11 +22,6 @@ export default function Navbar() {
     <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
       <i className="logo"><img src={logo} alt="logo" /></i>
       <ul className="navbar-nav">
-        <li className="nav-item">
-          <a href="#accueil" className="nav-link">
-            Accueil
-          </a>
-        </li>
         <li className="nav-item">
           <a href="#presentation" className="nav-link">
             Présentation

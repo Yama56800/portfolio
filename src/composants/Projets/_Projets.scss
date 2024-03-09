@@ -49,7 +49,7 @@
             width: 30vw;
             height: 28vh;
             opacity: 0;
-            transition:  0.5s ease-in-out;
+            transition:  0.2s ease-in-out;
 
             &[data-aos] {
                 opacity: 1;
@@ -64,7 +64,7 @@
                 bottom: 0;
                 background-color: rgba(33, 33, 33, 0); 
                 pointer-events: none; 
-                transition: background-color 0.5s, opacity 0.5s;  
+                transition: background-color 0.2s, opacity 0.2s;  
                 opacity: 0; 
                 width: 100%;
             }
@@ -78,7 +78,7 @@
                 color: red;
                 opacity: 0; 
                 visibility: hidden; 
-                transition: opacity 0.5s, visibility 0.5s; 
+                transition: opacity 0.2s, visibility 0.2s; 
                 z-index: 10;
                 position: absolute;
                 height: 13rem;
@@ -161,7 +161,7 @@
         color: white;
         border-radius: 23% 77% 22% 78% / 48% 52% 48% 52% ;
         text-decoration: none;
-        transition: background-color 0.5s, color 0.5s; 
+        transition: background-color 0.2s, color 0.2s; 
         &:hover {
             background-color: #BCDDEE;
             color: #000;
@@ -202,12 +202,12 @@
          .gallery-item-aside{
             width: 85vw;
             &[data-aos] {
-                transition-duration: 0.3s;
+                transition-duration: 0.2s;
             }
             .gallery-item{
                 width: 100%;
                 &[data-aos] {
-                    transition-duration: 0.3s;
+                    transition-duration: 0.2s;
                 }
             }
             img{
