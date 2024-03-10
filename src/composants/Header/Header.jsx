@@ -6,7 +6,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = 0; 
+      const triggerPoint = 910; 
       
       setIsSticky(scrollY > triggerPoint);
     };

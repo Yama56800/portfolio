@@ -6,6 +6,7 @@ body, html, #app {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
   }
+
   .welcome {
     display: flex;
     justify-content: center;
@@ -93,5 +94,108 @@ body, html, #app {
     h1 {
       font-size: 2rem;
       
+    }
+  }
+  .balls-container {
+    position: relative;
+    height: 100vh;
+    background-color: #6A6A6A;
+    overflow: hidden;
+  }
+  
+  .ballpink {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #c549f7;
+    border-radius: 50%;
+    transition: transform 2s ease;
+  }
+  .ballgreen {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #102D3D;
+    border-radius: 50%;
+    transition: transform 2s ease;
+  }
+  .bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(55px);
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    
+  }
+  .welcome-content{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    .welcome-title{
+      margin-left: 5vw;
+      margin-bottom: 20vh;
+      font-family: "Rubik", sans-serif;
+      text-align: start;
+
+      .welcome-h1{
+        font-size: 3rem;
+        font-weight: 900;
+        font-style: italic;
+        font-optical-sizing: auto;
+        line-height: 2;
+        
+      }
+      .welcome-h2{
+        font-size: 2rem;
+        margin-left: 0.5rem;
+        font-weight: 700;
+        font-style: italic;
+        font-optical-sizing: auto;
+      }
+    }
+    .welcome-logo{
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      img{
+        height: 100%;
+        width: 7.5rem;
+        object-fit: contain;
+      }
+      
+    }
+    .welcome-link{
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      .link-list{
+        margin-left: 3rem;
+        display: flex;
+
+        a{
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: black;
+          padding: 0.3rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          margin: 1rem;
+          border-radius: 0.5rem;
+          background-color: #c549f7;
+        }
+      }
+      i{
+        
+        img{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+      }
+    }
     }
   }
