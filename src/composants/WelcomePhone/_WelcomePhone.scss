@@ -1,59 +1,28 @@
-.welcomephone{
-    position: relative;
-    background: #979797;
-    padding: 8rem;
-    margin: 0;
+.welcomephone {
+  position: relative;
+  background: #979797;
+  padding: 8rem;
+  margin: 0;
+  display: flex;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+  .welcomephone-content {
+    height: 40vh;
+    width: 70vw;
     display: flex;
-    height: 75vh;
-        justify-content: center;
-        align-items: center;
-    .welcomephone-content{
-        height: 40vh;
-        width:70vw ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .welcomephone-title{
-            color: #fff;
-            width:70vw ;
-            font-size: 2rem;
-        }
+    justify-content: center;
+    align-items: center;
+    .welcomephone-title {
+      color: #fff;
+      width: 70vw;
+      font-size: 2rem;
     }
+  }
 }
-/* Arrow Button 
-	-----------------------------------*/
-    .container-arrow{
-        margin-top: -20px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color:#000;
-        display: inline-block;
-        text-align: center;
-          line-height: 40px;
-          position: absolute;
-          bottom:55px;left:0;
-          z-index: 10;
-          width:100%;
-          padding-bottom: 15px;
-          cursor: pointer;
-          font-size: 12px; 
 
-          .fa-angle-down{
-            color: white;
-          }
-        }
-        .container-arrow:hover,
-        .container-arrow:focus{text-decoration: none;}
-    
-            /* Arrow Bouncing */
-            .container-arrow span{  display: inline-block; font-size: 80px;	 animation: .7s down  infinite alternate; -webkit-animation: .7s down infinite alternate; } 
-            /***Animation Arrow down***/ 
-            @keyframes down{ 0%{transform:translateY(0px)} 100%{transform:translateY(20px)} } 
-            @-webkit-keyframes down{ 0%{-webkit-transform:translateY(0px)} 100%{-webkit-transform:translateY(20px)} } 
-            
-    
 @media (min-width: 768px) {
-    .welcomephone{
-        display: none;
-    }
+  .welcomephone {
+    display: none;
+  }
 }
