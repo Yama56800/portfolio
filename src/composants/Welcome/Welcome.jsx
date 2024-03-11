@@ -49,14 +49,17 @@ const FloatingBalls = () => {
           </div>
           <div className="welcome-link">
             <div className="link-list">
-              <a href="https://github.com/Yama56800">
+              <a href="https://github.com/Yama56800" target="_blank">
                 <i>
                   {" "}
                   <img src={git} alt="logo git" />
                 </i>
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/thomas-mahias-350a23212/">
+              <a
+                href="https://www.linkedin.com/in/thomas-mahias-350a23212/"
+                target="_blank"
+              >
                 <i>
                   {" "}
                   <img src={link} alt="logo linkedin" />

@@ -6,7 +6,9 @@
   background-color: #151515;
   padding-top: 5rem;
   color: #f8f8f8;
-
+  label {
+    display: none;
+  }
   .contact-form {
     background-color: #212121;
     padding: 2rem;
