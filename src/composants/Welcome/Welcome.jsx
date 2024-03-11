@@ -28,7 +28,7 @@ const FloatingBalls = () => {
   }, []);
 
   return (
-    <div className="balls-container">
+    <div className="balls-container" id="balls">
       {Array.from({ length: 8 }).map((_, index) => (
         <div key={index} className="ballpink"></div>
       ))}
@@ -72,9 +72,20 @@ const FloatingBalls = () => {
               </a>
             </div>
           </div>
-          <a class="container-arrow scroll-to" href="#cards">
+
+          <a
+            className="container-arrow scroll-to" // Utilisez `className` au lieu de `class` en JSX
+            onClick={(e) => {
+              e.preventDefault(); // Empêche le comportement de lien par défaut
+              const cible = document.getElementById("presentation"); // Assurez-vous que cet id est correct
+              if (cible) {
+                cible.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             <span>
-              <i class="fa fa-angle-down" aria-hidden="true"></i>{" "}
+              <i className="fa fa-angle-down" aria-hidden="true"></i>{" "}
+              {/* `className` pour JSX */}
             </span>
           </a>
         </div>

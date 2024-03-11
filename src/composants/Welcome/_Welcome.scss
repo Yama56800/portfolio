@@ -59,6 +59,11 @@ html,
       font-style: italic;
       font-optical-sizing: auto;
       line-height: 2;
+      transition: text-shadow 1s ease;
+      &:hover {
+        text-shadow: 0 0 5px #c549f7, 0 0 10px #c549f7, 0 0 20px #c549f7,
+          0 0 40px #c549f7; /* État de survol : effet de néon allumé */
+      }
     }
     .welcome-h2 {
       font-size: 2rem;
@@ -66,6 +71,11 @@ html,
       font-weight: 700;
       font-style: italic;
       font-optical-sizing: auto;
+      transition: text-shadow 1s ease;
+      &:hover {
+        text-shadow: 0 0 5px #c549f7, 0 0 10px #c549f7, 0 0 20px #c549f7,
+          0 0 40px #c549f7; /* État de survol : effet de néon allumé */
+      }
     }
   }
   .welcome-logo {
@@ -96,7 +106,12 @@ html,
         padding-right: 0.5rem;
         margin: 1rem;
         border-radius: 0.5rem;
-        background-color: #c549f7;
+        background-color: rgba(198, 74, 247, 1);
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: rgba(215, 114, 255, 0.9);
+        }
       }
     }
     i {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import logo from'../../logo-trans.webp';
+import logo from "../../logo-trans.webp";
 export default function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const triggerPoint = 910; 
-      
+      const triggerPoint = 910;
+
       setIsSticky(scrollY > triggerPoint);
     };
 
@@ -20,7 +20,11 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <i className="logo"><img src={logo} alt="logo" /></i>
+      <a className="link-logo" href="#balls">
+        <i className="logo">
+          <img src={logo} alt="logo" />
+        </i>
+      </a>
       <ul className="navbar-nav">
         <li className="nav-item">
           <a href="#presentation" className="nav-link">
@@ -48,7 +52,13 @@ export default function Navbar() {
           </a>
         </li>
         <li className="nav-item">
-        <a href={`${process.env.PUBLIC_URL}/cv.pdf`} target="_blank" rel="noopener noreferrer">Mon CV</a>
+          <a
+            href={`${process.env.PUBLIC_URL}/cv.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mon CV
+          </a>
         </li>
       </ul>
     </nav>

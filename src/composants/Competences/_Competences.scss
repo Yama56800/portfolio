@@ -18,8 +18,13 @@
   h2 {
     color: white;
     font-size: 2.4rem;
-    margin-top: 15rem;
+    margin-top: 8rem;
     padding-bottom: 2rem;
+    transition: text-shadow 1s ease;
+    &:hover {
+      text-shadow: 0 0 5px #c549f7, 0 0 10px #c549f7, 0 0 20px #c549f7,
+        0 0 40px #c549f7; /* État de survol : effet de néon allumé */
+    }
   }
 
   .competences-item {

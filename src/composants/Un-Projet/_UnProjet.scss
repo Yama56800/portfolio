@@ -1,58 +1,57 @@
-.Unprojet{
-    background-color: #fff;
-    
-    h2{
-        color: #212121;
-        padding: 5rem;
-        font-size: 2.4rem;
+.Unprojet {
+  background-color: #fff;
 
+  h2 {
+    color: #212121;
+    padding: 5rem;
+    font-size: 2.4rem;
+    transition: text-shadow 1s ease;
+    &:hover {
+      text-shadow: 0 0 5px #c549f7, 0 0 10px #c549f7, 0 0 20px #c549f7,
+        0 0 40px #c549f7; /* État de survol : effet de néon allumé */
     }
-    .Unprojet-content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        gap: 1.5rem;
-        padding-bottom: 3rem;
-        
-        .box{
-            max-width: 20vw;
-            background-color:#212121;
-            padding: 2rem;
-            border-radius: 1rem;
-            cursor: auto;
-            color: #fff;
-            h3{
-                padding-bottom: 2rem;
-            }
-        }
-        .box1{
-            
-        }
-        .box2{
+  }
+  .Unprojet-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
 
-        }
-        .box3{
-
-        }
-        .box4{
-
-        }
+    .box {
+      max-width: 20vw;
+      background-color: #212121;
+      padding: 2rem;
+      border-radius: 1rem;
+      cursor: auto;
+      color: #fff;
+      h3 {
+        padding-bottom: 2rem;
+      }
     }
+    .box1 {
+    }
+    .box2 {
+    }
+    .box3 {
+    }
+    .box4 {
+    }
+  }
 }
 @media (max-width: 1068px) {
-   .Unprojet{
-
-    .Unprojet-content{
-        flex-direction: column;
-        align-items: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        .box{
-            max-width: 80vw;
-            margin-bottom: 1.5rem;
-        }
+  .Unprojet {
+    .Unprojet-content {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      .box {
+        max-width: 80vw;
+        margin-bottom: 1.5rem;
+      }
     }
-   }
   }
+}
