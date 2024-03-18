@@ -11,15 +11,18 @@ export default function About() {
           <img className="photo-profil" src={photo} alt="photo de profil" />
           <div className="description">
             <p>
-              Moi ? C'est Thomas Mahias, <span>développeur front-end</span> avec
-              une solide expérience en <span>React</span>. Je crée des sites web
-              qui sont à la fois esthétiques et fonctionnels, en m'appuyant sur
-              des fondamentaux tels que HTML, CSS, et JavaScript. Mon objectif
-              est de construire des{" "}
+              Moi ? C'est Thomas Mahias,{" "}
+              <span>développeur front-end React</span>. Je crée des sites web
+              qui sont à la fois esthétiques et fonctionnels. Mon objectif est
+              de construire des{" "}
               <span>expériences web fluides et réactives</span>, en accord avec
-              les besoins spécifiques de chaque projet. Je suis toujours à la
-              recherche de nouvelles collaborations pour apporter ma
-              contribution à des projets innovants.
+              les besoins spécifiques de chaque projet.
+              <br />
+              <br />
+              Basé à <span> Ploërmel, Morbihan</span>, je suis ouvert à toutes
+              opportunités, que ce soit sur place ou à distance. Si vous êtes à
+              la recherche d'un développeur pour donner vie à vos idées et
+              projets innovants, <span>n'hésitez pas à me contacter !</span>
             </p>
           </div>
         </div>
