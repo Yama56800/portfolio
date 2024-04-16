@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import React, { useEffect, useState } from "react";
 
 import Btn from "../Btn-rotation/Btn-rotation";
 
@@ -39,6 +39,18 @@ import events2 from "../../images/724_Events/724events2.png";
 import argentbank from "../../images/Argentbank/ArgentBank.png";
 import argentbank1 from "../../images/Argentbank/Argentbank1.png";
 import argentbank2 from "../../images/Argentbank/Argentbank2.png";
+
+import viking from "../../images/Viking/viking.png";
+import viking1 from "../../images/Viking/viking1.png";
+import viking2 from "../../images/Viking/viking2.png";
+
+import photosave from "../../images/Photosave/photosave.png";
+import photosave1 from "../../images/Photosave/photosave1.png";
+import photosave2 from "../../images/Photosave/photosave2.png";
+
+import nextjs from "../../images/NextJs/nextjs.png";
+import nextjs1 from "../../images/NextJs/nextjs1.png";
+import nextjs2 from "../../images/NextJs/nextjs2.png";
 
 function Modal({ isOpen, onClose, content }) {
   if (!isOpen) return null;
@@ -193,6 +205,44 @@ export default function Projets() {
       siteUrl: "#",
       githubUrl: "https://github.com/Yama56800/ArgentBank-website",
       hideSiteLink: true,
+    },
+    {
+      title: "North site",
+      subTitle: "North site",
+      image: viking,
+      images_presentation1: viking1,
+      images_presentation2: viking2,
+      description:
+        "Découvrez la mythologie nordique sur mon projet de portfolio créé avec React. Ce site interactif propose un carrousel de slides cliquable pour explorer des légendes fascinantes, enrichi d'un quiz pour tester vos connaissances. Une expérience utilisateur élégante et informative.",
+      siteUrl: "https://yama56800.github.io/North-Site/",
+      githubUrl: "https://github.com/Yama56800/North-Site",
+      hideSiteLink: false,
+    },
+
+    {
+      title: "Photosave",
+      subTitle: "Photosave",
+      image: photosave,
+      images_presentation1: photosave1,
+      images_presentation2: photosave2,
+      description:
+        "PhotoSave est une application en ligne qui permet aux utilisateurs de créer un compte pour stocker, ajouter et supprimer des photos dans une galerie virtuelle. Gérez facilement votre collection de photos et accédez-y n'importe où, n'importe quand. PhotoSave offre une solution sécurisée et flexible pour conserver vos précieux souvenirs.",
+      siteUrl: "https://yama56800.github.io/photosave/",
+      githubUrl: "https://github.com/Yama56800/photosave",
+      hideSiteLink: false,
+    },
+
+    {
+      title: "NextJs App",
+      subTitle: "NextJs App",
+      image: nextjs,
+      images_presentation1: nextjs1,
+      images_presentation2: nextjs2,
+      description:
+        "Découvrez une application web développée avec Next.js, stylisée avec Tailwind CSS et renforcée par TypeScript. Cette combinaison offre une interface utilisateur moderne et réactive, avec des composants esthétiquement plaisants et fonctionnellement robustes. Idéale pour ceux qui recherchent performance, élégance et fiabilité dans leurs interactions digitales.",
+      siteUrl: "https://next-js-components.vercel.app/",
+      githubUrl: "https://github.com/Yama56800/NextJs-Components",
+      hideSiteLink: false,
     },
   ];
 
