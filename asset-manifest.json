@@ -1,21 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.3ef91794.css",
-    "main.js": "/static/js/main.7856a9d1.js",
+    "main.js": "/static/js/main.36878c05.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
+    "static/media/photosave1.png": "/static/media/photosave1.5af88c08e9de9ce8c2aa.png",
+    "static/media/viking1.png": "/static/media/viking1.6304f3dde3993b90ff16.png",
+    "static/media/photosave2.png": "/static/media/photosave2.44197cc042d6c0430231.png",
     "static/media/print_it1.png": "/static/media/print_it1.ef5c67a6d93dfafcd7ce.png",
     "static/media/ohmyfood2.png": "/static/media/ohmyfood2.7c49c32b3caba123af1e.png",
     "static/media/724events1.png": "/static/media/724events1.8e432dd9b454113694a6.png",
     "static/media/kasa1.png": "/static/media/kasa1.a936ba342012af361c00.png",
     "static/media/nina_carducci1.png": "/static/media/nina_carducci1.07f6f0e2a88b9b42fe41.png",
     "static/media/sophie_bluel1.png": "/static/media/sophie_bluel1.ef7efe13e4caeb781b6b.png",
+    "static/media/photosave.png": "/static/media/photosave.80e2013dccc4c1ff844f.png",
     "static/media/Booki2.png": "/static/media/Booki2.8404b5f358074958728c.png",
+    "static/media/viking2.png": "/static/media/viking2.d8c9b7c9da4e5ceb628b.png",
     "static/media/photo-profil.jpg": "/static/media/photo-profil.9344665d9fc436f5ec38.jpg",
     "static/media/kasa2.png": "/static/media/kasa2.ab6e84c9b5f0b7c2a382.png",
     "static/media/booki1.png": "/static/media/booki1.35ee86b992c059873d95.png",
     "static/media/print_it2.png": "/static/media/print_it2.d93b5adea0de5bb1ba53.png",
+    "static/media/nextjs2.png": "/static/media/nextjs2.986f181f9b0c2c2a9931.png",
     "static/media/ohmyfood1.png": "/static/media/ohmyfood1.fd866fc1e6cf6111580b.png",
     "static/media/menu_marker1.png": "/static/media/menu_marker1.4084e306a83042891cad.png",
+    "static/media/nextjs1.png": "/static/media/nextjs1.7c015196fc43a3baf3e1.png",
     "static/media/menu_marker2.png": "/static/media/menu_marker2.9c882449bb5d93488093.png",
     "static/media/nina_carducci2.png": "/static/media/nina_carducci2.d69eb48c35c5ad28c848.png",
     "static/media/Argentbank2.png": "/static/media/Argentbank2.3ca2a86ce67a3def2db8.png",
@@ -24,7 +31,9 @@
     "static/media/sophie_bluel2.png": "/static/media/sophie_bluel2.8d440df7971a1ecd2ea5.png",
     "static/media/menu_marker.png": "/static/media/menu_marker.050c62f46541babff9fa.png",
     "static/media/Argentbank1.png": "/static/media/Argentbank1.84830814f2dfd6631ceb.png",
+    "static/media/nextjs.png": "/static/media/nextjs.f7fc6911ad33578d0bf7.png",
     "static/media/sophie_bluel.png": "/static/media/sophie_bluel.20502a3c8cbfd5456ce9.png",
+    "static/media/viking.png": "/static/media/viking.b2c05e74684ac2ea1250.png",
     "static/media/booki.png": "/static/media/booki.1fcf2b31e8af41aab915.png",
     "static/media/Print_it.png": "/static/media/Print_it.38ce7dcb7105de375e1d.png",
     "static/media/ArgentBank.png": "/static/media/ArgentBank.efd360bc666074484876.png",
@@ -36,11 +45,11 @@
     "static/media/icons8-linkedin.svg": "/static/media/icons8-linkedin.9d8bea6ae8a383fb70ac255adc82a0db.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.34af7fca8a80708a47443da1ed562e9f.svg",
     "main.3ef91794.css.map": "/static/css/main.3ef91794.css.map",
-    "main.7856a9d1.js.map": "/static/js/main.7856a9d1.js.map",
+    "main.36878c05.js.map": "/static/js/main.36878c05.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ef91794.css",
-    "static/js/main.7856a9d1.js"
+    "static/js/main.36878c05.js"
   ]
 }
